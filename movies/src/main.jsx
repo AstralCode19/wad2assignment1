@@ -11,6 +11,7 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import UpcomingMovies from './pages/upcomingMovies';
+import WatchListPage from "./pages/watchListPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -35,7 +36,8 @@ const App = () => {
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={ <Navigate to="/" /> } />
             <Route path="/reviews/form" element={ <AddMovieReviewPage /> } />
-            <Route path="/movies/upcoming"element={ <UpcomingMovies /> } />
+            <Route path="/movies/upcoming" element={ <UpcomingMovies /> } />
+            <Route path="/movies/watchlist" element={<WatchListPage />} />
           </Routes>
         </MoviesContextProvider>
       </BrowserRouter>
