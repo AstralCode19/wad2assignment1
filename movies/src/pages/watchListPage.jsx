@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import PageTemplate from "../components/templateMovieListPage";
 import {getMovie} from "../api/tmdb-api";
 import { MoviesContext } from "../contexts/moviesContext";
-import Spinner from "../components/cardIcons/";
+import Spinner from "../components/spinner";
 import RemoveFromPlaylist from "../components/cardIcons/removeFromPlaylist";
 import { useQueries } from "@tanstack/react-query";
 
