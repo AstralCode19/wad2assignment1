@@ -12,6 +12,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import AddMovieReviewPage from './pages/addMovieReviewPage';
 import UpcomingMovies from './pages/upcomingMovies';
 import WatchListPage from "./pages/watchListPage";
+import PopularMovies from "./pages/popularMoviesPage";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -38,6 +39,7 @@ const App = () => {
             <Route path="/reviews/form" element={ <AddMovieReviewPage /> } />
             <Route path="/movies/upcoming" element={ <UpcomingMovies /> } />
             <Route path="/movies/watchlist" element={<WatchListPage />} />
+            <Route path="/movies/popular" element={<PopularMovies />} />
           </Routes>
         </MoviesContextProvider>
       </BrowserRouter>
