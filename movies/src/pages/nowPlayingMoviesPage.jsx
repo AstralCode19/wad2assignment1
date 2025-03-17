@@ -20,4 +20,16 @@ const NowPlayingMovies = (props) => {
     }
 
     const movies = data.results;
-}
+
+    return(
+        <PageTemplate
+        title="See What Movies are in Cinemas Now!"
+        movies={movies}
+        action={(movie) => {
+            return <AddToPlaylistIcon movie={movie} />
+        }} 
+        />
+    );
+};
+
+export default NowPlayingMovies;
