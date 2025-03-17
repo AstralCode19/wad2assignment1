@@ -27,8 +27,10 @@ const SiteHeader = ({ history }) => {
     { label: "Home", path: "/" },
     { label: "Favorites", path: "/movies/favorites" },
     { label: "Watch List", path: "/movies/watchlist" },
+    { label: "Now Playing", path: "/movies/now_playing"},
     { label: "Upcoming Movies", path: "/movies/upcoming" },
-    { }
+    { label: "Popular", path: "/movies/popular"},
+    { label: "Top Rated", path: "/movies/top_rated"},
   ];
 
   const handleMenuSelect = (pageURL) => {
@@ -48,7 +50,7 @@ const SiteHeader = ({ history }) => {
             TMDB Client
           </Typography>
           <Typography variant="h6" sx={{ flexGrow: 1 }}>
-            Welcome to the app that will give you all the movie information you need!
+            Welcome to the movie app that'll keep you up to date!
           </Typography>
             {isMobile ? (
               <>
