@@ -94,6 +94,7 @@ export default function FilterMoviesCard(props) {
               );
             })}
           </Select>
+          
         </FormControl>
       </CardContent>
       <CardMedia

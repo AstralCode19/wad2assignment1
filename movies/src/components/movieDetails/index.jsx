@@ -73,6 +73,10 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         ))}
       </Paper>
 
+      <Paper>
+        
+      </Paper>
+
       <Fab
         color="secondary"
         variant="extended"
