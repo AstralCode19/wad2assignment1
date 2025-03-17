@@ -1,10 +1,10 @@
 import React, {useContext} from "react";
 import PageTemplate from "../components/templateMovieListPage";
-import {getMovie} from "../api/tmdb-api";
 import { MoviesContext } from "../contexts/moviesContext";
+import { useQueries } from "@tanstack/react-query";
+import { getMovie } from "../api/tmdb-api";
 import Spinner from "../components/spinner";
 import RemoveFromPlaylist from "../components/cardIcons/removeFromPlaylist";
-import { useQueries } from "@tanstack/react-query";
 
 const WatchListPage = () => {
     const {mustWatch: movieIds} = useContext(MoviesContext);
@@ -27,6 +27,8 @@ const WatchListPage = () => {
         r.data.genre_ids = r.data.genres.map(ge => ge.id)
         return r.data
     });
+
+    const toDo = () => true;
 
     return (
         <PageTemplate 
