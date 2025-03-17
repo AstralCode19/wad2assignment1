@@ -17,4 +17,30 @@ const WatchListPage = () => {
             }
         })
     });
-}
+
+    const isPending = watchListMovieQueries.find((n) => n.isPending === true);
+    if (isPending) {
+        return <Spinner />;
+    }
+
+    const movies = watchListMovieQueries.map((r) => {
+        r.data.genre_ids = r.data.genres.map(ge => ge.id)
+        return r.data
+    });
+
+    return (
+        <PageTemplate 
+        title = "Watch List"
+        movies = {movies}
+        action = {(movie) => {
+            return (
+                <>
+                    <RemoveFromPlaylist movie={movie} />
+                </>
+            );
+        }}
+        />
+    );
+};
+
+export default WatchListPage;
