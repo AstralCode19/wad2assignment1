@@ -18,20 +18,6 @@ import { Link } from "react-router";
 import Avatar from '@mui/material/Avatar';
 
 export default function MovieCard({ movie, action }) {
-  // const movie = props.movie;
-
-  // const { favorites, addToFavorites } = useContext(MoviesContext);
-
-  // if (favorites.find((id) => id === movie.id)) {
-  //   movie.favorite = true;
-  // } else {
-  //   movie.favorite = false
-  // }
-
-  // const handleAddToFavorite = (e) => {
-  //   e.preventDefault();
-  //   addToFavorites(movie);
-  // };
   const { favorites, addToFavorites } = useContext(MoviesContext);
 
   if (favorites.find((id) => id === movie.id)) {
