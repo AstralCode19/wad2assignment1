@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import {getMovie} from "../api/tmdb-api";
 import PageTemplate from "../components/templateMovieListPage";
 import { MoviesContext } from "../contexts/moviesContext";
