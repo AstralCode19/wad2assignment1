@@ -8,7 +8,7 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 import Fab from "@mui/material/Fab";
 import Typography from "@mui/material/Typography";
 import Drawer from "@mui/material/Drawer";
-import MovieReviews from "../movieReviews"
+import MovieReviews from "../movieReviews";
 
 const root = {
     display: "flex",
@@ -73,9 +73,20 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         ))}
       </Paper>
 
-      <Paper>
-        
-      </Paper>
+      <Typography variant="h5" component="h3">
+        Recommendations
+      </Typography>
+
+      {/* <Paper component="ul" sx={{...root}}>
+        <li>
+          <Chip label="Recommendations" sx={{...chip}}/>
+        </li>
+        {movie.recommendations.map((j) => (
+          <li key={j.name}>
+            <Chip label={j.name} sx={{...chip}} />
+          </li>
+        ))}
+      </Paper> */}
 
       <Fab
         color="secondary"
