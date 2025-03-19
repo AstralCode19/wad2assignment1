@@ -9,8 +9,7 @@ export default function CircularIndeterminate() {
         '& > * + *': {
           marginLeft: '2em',
         }}}>
-      <CircularProgress />
-      <CircularProgress />
+      <CircularProgress color="success" variant="determinate" value={progress}/>
     </div>
   );
 }
