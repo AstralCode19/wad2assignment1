@@ -16,6 +16,7 @@ import Grid from "@mui/material/Grid2";
 import img from '../../images/film-poster-placeholder.png'
 import { Link } from "react-router";
 import Avatar from '@mui/material/Avatar';
+import { Tooltip } from "@mui/material";
 
 export default function MovieCard({ movie, action }) {
   const { favorites, addToFavorites } = useContext(MoviesContext);
@@ -79,9 +80,11 @@ export default function MovieCard({ movie, action }) {
       <CardActions disableSpacing>
         {action(movie)}
         <Link to={`/movies/${movie.id}`}>
+          <Tooltip title="Read more about movie">
           <Button variant="outlined" size="medium" color="primary">
             More Info ...
           </Button>
+          </Tooltip>
         </Link>
       </CardActions>
     </Card>

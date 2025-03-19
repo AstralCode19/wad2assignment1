@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { MoviesContext } from "../../contexts/moviesContext";
+import { Tooltip } from "@mui/material";
 
 const RemoveFromFavoritesIcon = ({ movie }) => {
   const context = useContext(MoviesContext);
@@ -11,12 +12,11 @@ const RemoveFromFavoritesIcon = ({ movie }) => {
     context.removeFromFavorites(movie);
   };
   return (
-    <IconButton
-      aria-label="remove from favorites"
-      onClick={handleRemoveFromFavorites}
-    >
+    <Tooltip title="Remove from Favorites">
+    <IconButton aria-label="remove from favorites" onClick={handleRemoveFromFavorites}>
       <DeleteIcon color="primary" fontSize="large" />
     </IconButton>
+    </Tooltip>
   );
 };
 
