@@ -12,10 +12,14 @@ const AddToFavoritesIcon = ({ movie }) => {
     context.addToFavorites(movie);
   };
 
+  const FavPopup = () => {
+    alert("You have added a movie to Favorites.")
+  }
+
   return (
     <Tooltip title="Add to Favorites">
     <IconButton aria-label="add to favorites" onClick={handleAddToFavorites}>
-      <FavoriteIcon color="primary" fontSize="large" />
+      <FavoriteIcon color="primary" fontSize="large" onClick={FavPopup}/>
     </IconButton>
     </Tooltip>
   );
