@@ -13,7 +13,7 @@ const RemoveFromPlaylistIcon = ({movie}) => {
     };
 
     return (
-        <Tooltip title="Remove from Playlist">
+        <Tooltip title="Remove from Watch List">
         <IconButton aria-label="remove from playlist" onClick={handleRemoveFromPlaylist}>
             <DeleteIcon fontSize="large"/>
         </IconButton>
