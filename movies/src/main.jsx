@@ -42,8 +42,8 @@ const App = () => {
             <Route path="/movies/upcoming" element={ <UpcomingMovies /> } />
             <Route path="/movies/watchlist" element={<WatchListPage />} />
             <Route path="/movies/popular" element={<PopularMovies />} />
-            <Route path="/movies/now_playing" element={<NowPlayingMovies />} />
-            <Route path="/movies/top_rated" element={<TopRatedMovies />} />
+            <Route path="/movies/now-playing" element={<NowPlayingMovies />} />
+            <Route path="/movies/top-rated" element={<TopRatedMovies />} />
           </Routes>
         </MoviesContextProvider>
       </BrowserRouter>
