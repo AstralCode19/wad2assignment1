@@ -3,7 +3,7 @@ import { useParams } from 'react-router';
 import MovieDetails from "../components/movieDetails/";
 import PageTemplate from "../components/templateMoviePage";
 import { getMovie } from '../api/tmdb-api';
-// import { getRecommendations } from "../api/tmdb-api";
+import { getRecommendations } from "../api/tmdb-api";
 import { useQuery } from '@tanstack/react-query';
 import Spinner from '../components/spinner';
 // import useMovie from "../hooks/useMovie"; 
@@ -13,6 +13,8 @@ const MoviePage = (props) => {
   const { data: movie, error, isPending, isError  } = useQuery({
     queryKey: ['movie', {id: id}],
     queryFn: getMovie,
+    queryKey: ['recommendation', {id: id}],
+    queryFn: getRecommendations,
   })
 
   if (isPending) {
