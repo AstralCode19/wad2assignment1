@@ -100,8 +100,8 @@ const ReviewForm = ({ movie }) => {
   };
 
   return (
-    <Box component="div" sx={styles.root}>
-      <Typography component="h2" variant="h3">
+    <Box component="div" sx={styles.root} style={{backgroundColor:"purple", margin:"2em", padding:"2em"}}>
+      <Typography component="h2" variant="h3" sx={{color:"white"}}>
         Write a review
       </Typography>
 
@@ -115,6 +115,7 @@ const ReviewForm = ({ movie }) => {
           severity="success"
           variant="filled"
           onClose={handleSnackClose}
+          sx={{color:"white"}}
         >
           <Typography variant="h4">
             Thank you for submitting a review
@@ -130,7 +131,7 @@ const ReviewForm = ({ movie }) => {
           defaultValue=""
           render={({ field: { onChange, value } }) => (
             <TextField
-              sx={{ width: "40ch" }}
+              sx={{ width: "40ch", backgroundColor:"white" }}
               variant="outlined"
               margin="normal"
               required
@@ -159,6 +160,7 @@ const ReviewForm = ({ movie }) => {
           defaultValue=""
           render={({ field: { onChange, value } }) => (
             <TextField
+              sx={{backgroundColor:"white"}}
               variant="outlined"
               margin="normal"
               required
@@ -178,12 +180,13 @@ const ReviewForm = ({ movie }) => {
             {errors.review.message}
           </Typography>
         )}
-
+        <br /><br />
         <Controller
           control={control}
           name="rating"
           render={({ field: { onChange, value } }) => (
             <TextField
+              sx={{backgroundColor:"white"}}
               id="select-rating"
               select
               variant="outlined"
@@ -200,7 +203,8 @@ const ReviewForm = ({ movie }) => {
             </TextField>
           )}
         />
-
+        <br />
+        <br />
         <Box sx={styles.buttons}>
           <Button
             type="submit"
