@@ -20,32 +20,32 @@ const root = {
 };
 const chip = { margin: 0.5 };
 
-const MovieDetails = ({ movie }) => {  // Don't miss this!
+const MovieDetails = ({ movie }) => {  
   const [drawerOpen, setDrawerOpen] = useState(false);  
 
   return (
     <>
-      <Typography variant="h5" component="h3">
+      <Typography variant="h5" component="h3" sx={{color:"white"}}>
         Overview
       </Typography>
 
-      <Typography variant="h6" component="p">
+      <Typography variant="h6" component="p" sx={{color:"white", paddingBottom:"1em"}}>
         {movie.overview}
       </Typography>
 
-      <Paper component="ul" sx={{...root}}>
+      <Paper component="ul" sx={{...root, backgroundColor:"purple"}}>
         <li>
-          <Chip label="Genres" sx={{...chip}} color="primary" />
+          <Chip label="Genres" sx={{...chip, backgroundColor:"black", color:"white"}} />
         </li>
         
         {movie.genres.map((g) => (
           <li key={g.name}>
-            <Chip label={g.name} sx={{...chip}} />
+            <Chip label={g.name} sx={{...chip, backgroundColor:"white"}} />
           </li>
         ))}
       </Paper>
 
-      <Paper component="ul" sx={{...root}}>
+      <Paper component="ul" sx={{...root, backgroundColor:"purple"}}>
         <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
 
         <Chip
@@ -61,14 +61,14 @@ const MovieDetails = ({ movie }) => {  // Don't miss this!
         <Chip label={`Released: ${movie.release_date}`} />
       </Paper>
 
-      <Paper component="ul" sx={{...root}}>
+      <Paper component="ul" sx={{...root, backgroundColor:"purple"}}>
         <li>
-        	<Chip label="Production Countries" sx={{...chip}} color="primary"/>
+        	<Chip label="Production Countries" sx={{...chip, backgroundColor:"black", color:"white"}} />
         </li>
         
         {movie.production_countries.map((h) => (
           <li key={h.name}>
-            <Chip label={h.name} sx={{...chip}} />
+            <Chip label={h.name} sx={{...chip, backgroundColor:"white"}} />
           </li>
         ))}
       </Paper>

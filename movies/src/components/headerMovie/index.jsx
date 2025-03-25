@@ -26,13 +26,16 @@ const MovieHeader = (props) => {
         <ArrowBackIcon color="primary" fontSize="large" />
       </IconButton>
 
-      <Typography variant="h4" component="h3">
-        {movie.title}
+      <Typography variant="h4" component="h3" sx={{textAlign:"center"}}>
         <a href={movie.homepage}>
           <HomeIcon color="primary" />
         </a>
+        <br /><hr />
+        {movie.title}
         <br />
-        <span sx={{ fontSize: "1.5rem" }}>{`   "${movie.tagline}"`} </span>
+        <span sx={{ fontSize:"1.5rem" }}>{`   "${movie.tagline}"`} </span>
+        <br />
+        <br />
       </Typography>
 
       <IconButton aria-label="go forward" onClick={() => navigate(+1) } >
