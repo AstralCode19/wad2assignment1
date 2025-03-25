@@ -23,10 +23,11 @@ function MovieListPageTemplate({ movies, title, action, para }) {
   };
 
   return (
-    <Grid container>
+    <Grid container sx={{backgroundColor:"black"}}>
       <Grid size={12}>
         <Header title={title} />
       </Grid>
+
       <Grid container sx={{flex: "1 1 500px"}}>
         <Grid 
           key="find" 

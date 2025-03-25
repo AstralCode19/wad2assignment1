@@ -43,7 +43,7 @@ export default function MovieCard({ movie, action }) {
           ) : null
         }
         title={
-          <Typography variant="h5" component="p">
+          <Typography variant="h5" component="p" sx={{backgroundColor:"purple", color:"white", padding:"0.5em"}}>
             {movie.title}{" "}
           </Typography>
         }
@@ -63,14 +63,14 @@ export default function MovieCard({ movie, action }) {
         <Grid container>
           <Grid size={{xs: 6}}>
             <Typography variant="h6" component="p">
-              <CalendarIcon fontSize="small" />
+              <CalendarIcon fontSize="small" sx={{color:"purple"}}/>
               {movie.release_date}
             </Typography>
           </Grid>
 
           <Grid size={{xs: 6}}>
             <Typography variant="h6" component="p">
-              <StarRateIcon fontSize="small" />
+              <StarRateIcon fontSize="small" sx={{color:"purple"}}/>
               {"  "} {movie.vote_average}{" "}
             </Typography>
           </Grid>
@@ -81,7 +81,7 @@ export default function MovieCard({ movie, action }) {
         {action(movie)}
         <Link to={`/movies/${movie.id}`}>
           <Tooltip title="Read more about movie">
-          <Button variant="outlined" size="medium" color="primary">
+          <Button variant="outlined" size="medium" sx={{backgroundColor:"black", color:"white"}}>
             More Info ...
           </Button>
           </Tooltip>
