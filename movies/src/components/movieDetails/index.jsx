@@ -25,14 +25,14 @@ const MovieDetails = ({ movie }) => {
 
   return (
     <>
-      <Typography variant="h5" component="h3" sx={{color:"white"}}>
+      <Typography variant="h5" component="h3" sx={{color:"white", paddingTop:"2em"}}>
         Overview
       </Typography>
-
-      <Typography variant="h6" component="p" sx={{color:"white", paddingBottom:"1em"}}>
+      <hr />
+      <Typography variant="h6" component="p" sx={{color:"white", paddingBottom:"3em"}}>
         {movie.overview}
       </Typography>
-
+      <hr />
       <Paper component="ul" sx={{...root, backgroundColor:"purple"}}>
         <li>
           <Chip label="Genres" sx={{...chip, backgroundColor:"black", color:"white"}} />
@@ -46,19 +46,21 @@ const MovieDetails = ({ movie }) => {
       </Paper>
 
       <Paper component="ul" sx={{...root, backgroundColor:"purple"}}>
-        <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} />
+        <Chip icon={<AccessTimeIcon />} label={`${movie.runtime} min.`} sx={{backgroundColor:"white"}}/>
 
         <Chip
           icon={<MonetizationIcon />}
           label={`${movie.revenue.toLocaleString()}`}
+          sx={{backgroundColor:"white"}}
         />
 
         <Chip
           icon={<StarRate />}
           label={`${movie.vote_average} (${movie.vote_count})`}
+          sx={{backgroundColor:"white"}}
         />
 
-        <Chip label={`Released: ${movie.release_date}`} />
+        <Chip label={`Released: ${movie.release_date}`} sx={{backgroundColor:"white"}}/>
       </Paper>
 
       <Paper component="ul" sx={{...root, backgroundColor:"purple"}}>
@@ -72,11 +74,11 @@ const MovieDetails = ({ movie }) => {
           </li>
         ))}
       </Paper>
-
-      <Typography variant="h5" component="h3">
+      <hr />
+      <Typography variant="h5" component="h3" sx={{color:"white", paddingTop:"2.5em"}}>
         Recommendations
       </Typography>
-
+      <hr />
       {/* <Paper component="ul" sx={{...root}}>
         <li>
           <Chip label="Recommendations" sx={{...chip}}/>

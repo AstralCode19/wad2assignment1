@@ -31,11 +31,11 @@ export default function MovieReviews({ movie }) {
   return (
     <TableContainer component={Paper}>
       <Table sx={{minWidth: 550}} aria-label="reviews table">
-        <TableHead>
+        <TableHead sx={{backgroundColor:"black"}}>
           <TableRow>
-            <TableCell >Author</TableCell>
-            <TableCell align="center">Excerpt</TableCell>
-            <TableCell align="right">More</TableCell>
+            <TableCell sx={{color:"white"}}>Author</TableCell>
+            <TableCell align="center" sx={{color:"white"}}>Excerpt</TableCell>
+            <TableCell align="right" sx={{color:"white"}}>More</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
