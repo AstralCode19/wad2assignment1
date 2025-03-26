@@ -80,11 +80,6 @@ const MovieDetails = ({ movie }) => {
       </Typography>
       <hr />
 
-
-      
-
-
-
       <Fab
         color="secondary"
         variant="extended"

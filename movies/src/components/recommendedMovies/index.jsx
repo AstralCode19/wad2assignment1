@@ -33,16 +33,14 @@ const RecommendedMovies = (props) => {
 console.log(recommendation);
     return (
         <>
-            <Paper component="ul" sx={{...root}}>
-                <li>
-                    <Chip label="Recommendations" sx={{...chip}}/>
-                </li>
-                    {recommendation.results.map((j) => (
-                <li key={j.title}>
-                    <Chip label={j.title} sx={{...chip}} />
-                </li>
+            <Paper component="ul" sx={{...root}} style={{backgroundColor:"purple"}}>
+                {recommendation.results.map((j) => (
+                    <li key={j.title}>
+                        <Chip label={j.title} sx={{...chip}} style={{backgroundColor:"white"}}/>
+                    </li>
                 ))}
             </Paper>
+            <hr />
         </>
     );
 };

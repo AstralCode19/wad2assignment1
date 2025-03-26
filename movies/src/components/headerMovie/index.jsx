@@ -23,14 +23,14 @@ const MovieHeader = (props) => {
         }}
       >
       <IconButton aria-label="go back" onClick={() => navigate(-1)} >
-        <ArrowBackIcon color="primary" fontSize="large" />
+        <ArrowBackIcon sx={{color:"purple"}} fontSize="large" />
       </IconButton>
 
-      <Typography variant="h4" component="h3" sx={{textAlign:"center"}}>
+      <Typography variant="h4" component="h3" sx={{textAlign:"center", backgroundColor:"black", color:"white", paddingLeft:"1em", paddingRight:"1em", borderRadius:"10px"}}>
         <a href={movie.homepage}>
-          <HomeIcon color="primary" />
+          <HomeIcon sx={{color:"purple"}}/>
         </a>
-        <br /><hr />
+        <br /><hr sx={{color:"purple"}}/>
         {movie.title}
         <br />
         <span sx={{ fontSize:"1.5rem" }}>{`   "${movie.tagline}"`} </span>
@@ -39,7 +39,7 @@ const MovieHeader = (props) => {
       </Typography>
 
       <IconButton aria-label="go forward" onClick={() => navigate(+1) } >
-        <ArrowForwardIcon color="primary" fontSize="large" />
+        <ArrowForwardIcon sx={{color:"purple"}} fontSize="large" />
       </IconButton>
     </Paper>
   );
