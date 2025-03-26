@@ -79,16 +79,11 @@ const MovieDetails = ({ movie }) => {
         Recommendations
       </Typography>
       <hr />
-      {/* <Paper component="ul" sx={{...root}}>
-        <li>
-          <Chip label="Recommendations" sx={{...chip}}/>
-        </li>
-        {movie.recommendations.map((j) => (
-          <li key={j.name}>
-            <Chip label={j.name} sx={{...chip}} />
-          </li>
-        ))}
-      </Paper> */}
+
+
+      
+
+
 
       <Fab
         color="secondary"
