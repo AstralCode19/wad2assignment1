@@ -4,13 +4,12 @@ import PageTemplate from '../components/templateMovieListPage';
 import { useQuery } from '@tanstack/react-query';
 import Spinner from '../components/spinner';
 import AddToFavoritesIcon from '../components/cardIcons/addToFavorites';
-//import homePagination from "../components/pagination";
 
 const HomePage = (props) => {
-  let page = 3;
+  // let page = 3;
   const { data, error, isPending, isError  } = useQuery({
     queryKey: ['discover'],
-    queryFn: () => getMovies(page),
+    queryFn: getMovies,
   })
   
   if (isPending) {

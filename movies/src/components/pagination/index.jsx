@@ -1,13 +1,3 @@
-// import * as React from "react";
-// import Pagination from "@mui/material/Pagination";
-
-// const homePagination = () => {
-//     return (
-//         <Pagination count={5}/>
-//     );
-// }
-// export default homePagination;
-
 import React from 'react';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { getMovies } from '../../api/tmdb-api';
